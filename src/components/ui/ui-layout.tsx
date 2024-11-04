@@ -18,12 +18,12 @@ export function UiLayout({ children, links }: { children: ReactNode; links: { la
       <div className="navbar bg-base-300 text-neutral-content flex-col md:flex-row space-y-2 md:space-y-0">
         <div className="flex-1">
           <Link className="btn btn-ghost normal-case text-xl" href="/">
-            <img className="h-4 md:h-6" alt="Logo" src="/logo.png" />
+            <p className='text-2xl font-semibold text-black italic'>Raydium Tool</p>
           </Link>
           <ul className="menu menu-horizontal px-1 space-x-2">
             {links.map(({ label, path }) => (
               <li key={path}>
-                <Link className={pathname.startsWith(path) ? 'active' : ''} href={path}>
+                <Link className={pathname.startsWith(path) ? 'active text-lg' : 'text-black text-opacity-80 italic text-lg'} href={path}>
                   {label}
                 </Link>
               </li>
